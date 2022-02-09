@@ -1,0 +1,28 @@
+extends ../layout
+
+block vars
+    - const title = "Sign up"
+    - 
+        const fields = [
+            {label: 'login', type: 'text', name: 'login'}, 
+            {label: 'first name', type: 'text', name: 'first_name'},
+            {label: 'second name', type: 'text', name: 'second_name'},
+            {label: 'email', type: 'email', name: 'email'},
+            {label: 'phone', type: 'number', name: 'phone'},
+            {label: 'password', type: 'password', name: 'password'}
+        ]
+
+block styles
+    link(href='../../index.css' rel='stylesheet')
+
+block content
+    include ../../components/field/field.pug
+    include ../../components/button/button.pug
+    div.signup
+        h2.signup__title Sign up
+        form.signup__form
+            each item in fields 
+                +field(item.label, item.type, item.name)
+            div.signup__btns
+                +button('submit') Sign up 
+                a.link.signup__link(href='./signin.pug') Sign in

@@ -1,0 +1,31 @@
+extends ../layout
+
+block vars
+    - const title = "Profile edit data"
+    - 
+        const fields = [
+            {label: 'email', type: 'email', name: 'email'},
+            {label: 'login', type: 'text', name: 'login'}, 
+            {label: 'name', type: 'text', name: 'name'},
+            {label: 'last name', type: 'text', name: 'last_name'},
+            {label: 'name in chat', type: 'text', name: 'display_name'},
+            {label: 'phone', type: 'number', name: 'phone'},
+        ]
+
+block styles
+    link(href='../../index.css' rel='stylesheet')
+
+block content
+    include ../../components/avatar-upload/avatar-upload.pug
+    include ../../components/button/button.pug
+    include ../../components/field/field.pug
+    .profile
+        .profile__logo
+            +avatar-upload('../../../static/logo.svg')
+        form.profile__form
+            each item in fields 
+                +field(item.label, item.type, item.name)
+            +button('submit', 'profile__form_btn') Save
+            a(href='../profile/index.pug') Back to profile
+            
+

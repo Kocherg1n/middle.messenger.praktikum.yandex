@@ -1,0 +1,15 @@
+.chat-head {
+  &__header {
+    text-align: right;
+    padding: 10px;
+
+    & a  {
+      color: var(--color-second-text) !important;
+    }
+  }
+
+  &__search {
+    margin-bottom: 10px;
+    padding: 0 10px;
+  }
+}

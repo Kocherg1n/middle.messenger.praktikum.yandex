@@ -1,0 +1,4 @@
+mixin field(label, type, name)
+    .field
+        label.field__label(for=name)= label
+        input.field__input(type=type, name=name, id=name)

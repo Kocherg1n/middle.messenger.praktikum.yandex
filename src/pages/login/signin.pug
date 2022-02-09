@@ -1,0 +1,19 @@
+extends ../layout
+
+block vars
+    - const title = "Sign in"
+
+block styles
+    link(href='../../index.css' rel='stylesheet')
+
+block content
+    include ../../components/field/field.pug
+    include ../../components/button/button.pug
+    div.signin
+        h2.signin__title Sign in
+        form.signin__form
+            +field('login', 'text', 'login')
+            +field('password', 'password', 'password')
+            div.signin__btns
+                +button('submit') Sign in
+                a.link.signin__link(href='./signup.pug') Sign up

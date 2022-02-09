@@ -1,0 +1,29 @@
+.avatar-upload {
+    background-color: #EFEFEF;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+
+    &:hover:after {
+        display: block;
+        content: '';
+        width: 100%;
+        height: 100%;
+        background-color: var(--color-gray-transparent);
+        position: absolute;
+    }
+
+    &__img {
+        max-width: 60px;
+    }
+
+    &__input {
+        display: none;
+    }
+}

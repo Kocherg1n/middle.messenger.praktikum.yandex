@@ -1,0 +1,15 @@
+extends ../layout
+
+block vars
+    - const title = "Chat"
+
+block styles
+    link(href='../../index.css' rel='stylesheet')
+block content
+    .container
+        .chat
+            .chat__sidebar
+                include ../../components/chat-head/chat-head.pug
+                include ../../components/chat-list/chat-list.pug
+            .chat__dialog
+                span Выберите чат чтобы отправить сообщение
