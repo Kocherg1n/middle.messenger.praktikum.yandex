@@ -2,6 +2,9 @@
 
 Chat-App 1.0
 
+# Deployed
+https://priceless-bohr-2e3f76.netlify.app/
+
 ## Install
 
 Run:
