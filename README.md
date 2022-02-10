@@ -13,3 +13,5 @@ Run:
 - `npm start` — launch development version,
 - `npm run build` — build stable version.
 
+PR - https://github.com/Kocherg1n/middle.messenger.praktikum.yandex/pull/1
+
