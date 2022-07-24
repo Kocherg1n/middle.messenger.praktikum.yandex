@@ -1,0 +1,6 @@
+mixin list(data)
+    ul.list
+        each item in data
+            li.list__item
+                span.list__item_label #{item.label}
+                span.list__item_value #{item.value}

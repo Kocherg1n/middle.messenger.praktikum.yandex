@@ -1,0 +1,13 @@
+extends ../layout
+
+block vars
+    - const title = "Error..."
+
+block styles
+    link(href='../../index.css' rel='stylesheet')
+
+block content
+    .error
+        .error__title 500 
+        .error__subtitle Something wrong ...
+        a(href='/') Back to main

@@ -1,0 +1,23 @@
+- 
+        const chats = [
+            {logo: '../../../static/user.svg', label: 'Mike', time: '10:49', message: 'Nice work mr', count: 9}, 
+            {logo: '../../../static/user.svg', label: 'Lora', time: '12:22', message: 'By by', count: 2},
+            {logo: '../../../static/user.svg', label: 'Jordan', time: '1 may 2021', message: 'Good news Jordan', count: 0} 
+        ]
+
+include ./time/time.pug
+include ./name/name.pug
+include ./counter/counter.pug
+include ./text/text.pug
+ul.chat-list
+    each item in chats
+        li.chat-list__item
+            img.chat-list__item_img(src=item.logo)
+            .chat-list__item_info
+                div
+                    +name(item.label)
+                    +time(item.time)
+                div
+                    +text(item.message)
+                    +counter(item.count)
+            

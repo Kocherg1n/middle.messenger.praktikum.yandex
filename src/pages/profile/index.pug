@@ -1,0 +1,30 @@
+extends ../layout
+
+block vars
+    - const title = "Profile"
+    - 
+        const profileInfo = 
+        [
+            {label: 'Email', value: 'pochta@yandex.ru'}, 
+            {label: 'Login', value: 'user login'},
+            {label: 'Name', value: 'user name'},
+            {label: 'Last name', value: 'User last name'},
+            {label: 'Name in chat', value: 'User name in chat'},
+            {label: 'Phone', value: 'User phone'},
+        ]
+
+block styles
+    link(href='../../index.css' rel='stylesheet')
+
+block content
+    include ../../components/avatar/avatar.pug
+    include ../../components/list/list.pug
+    .profile
+        .profile__logo
+            +avatar('../../../static/logo.svg')
+        .profile__info
+            +list(profileInfo)
+        .profile__controls
+            a(href='edit-info.pug') Change data
+            a(href='edit-password.pug') Change password
+            a(href='/') Home

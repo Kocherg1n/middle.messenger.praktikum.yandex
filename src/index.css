@@ -1,0 +1,123 @@
+:root {
+  --color-white: #fff;
+  --color-blue: #0d6efd;
+  --color-gray: #fbfbfb;
+  --color-gray-transparent: rgb(210, 210, 210, 0.3);
+
+  --color-border: #efefef;
+  --color-main-text: #1e1e1e;
+  --color-second-text: #999999;
+  --color-link-hover: #0b5ed7;
+}
+
+/* fonts */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+/* components style */
+@import "./components/button/button.css";
+@import "./components/chat-list/time/time.css";
+@import "./components/chat-list/name/name.css";
+@import "./components/chat-list/counter/counter.css";
+@import "./components/chat-list/text/text.css";
+@import "./components/field/field.css";
+@import "./components/avatar/avatar.css";
+@import "./components/avatar-upload/avatar-upload.css";
+@import "./components/list/list.css";
+@import "./components/chat-head/chat-head.css";
+@import "./components/search/search.css";
+@import "./components/chat-list/chat-list.css";
+
+/* pages style */
+@import "./pages/chat/chat.css";
+@import "./pages/error/error.css";
+@import "./pages/profile/index.css";
+@import "./pages/login/index.css";
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove ul list styles */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  overflow: hidden;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-family: "Roboto", sans-serif;
+  background-color: var(--color-white);
+  font-size: 14px;
+}
+
+main {
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-blue);
+
+  &:visited {
+    color: var(--color-blue);
+  }
+
+  &:hover {
+    color: var(--color-link-hover);
+    transition: 0.3s;
+  }
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}

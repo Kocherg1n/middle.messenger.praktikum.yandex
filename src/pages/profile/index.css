@@ -1,0 +1,40 @@
+.profile {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+
+  &__logo {
+    margin-bottom: 40px;
+  }
+
+  &__info {
+    width: 100%;
+    max-width: 460px;
+    margin-bottom: 40px;
+  }
+
+  &__form {
+    width: 100%;
+    max-width: 460px;
+    margin-bottom: 40px;
+
+    &_btn {
+      margin: 20px 0 10px 0;
+    }
+  }
+
+  &__controls {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+    max-width: 460px;
+
+    & a {
+      margin-bottom: 5px;
+    }
+  }
+}

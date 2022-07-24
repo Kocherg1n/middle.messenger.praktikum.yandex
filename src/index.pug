@@ -1,0 +1,19 @@
+extends pages/layout
+
+block vars
+    - const title = "Main"
+
+block styles 
+    link(href='./index.css' rel='stylesheet')
+block content
+    h1 main
+    div
+        a(href="pages/login/signin.pug") sign in page
+    div
+        a(href="pages/login/signup.pug") sign up page
+    div
+        a(href="pages/error/error.pug") error page
+    div
+        a(href="pages/profile/index.pug") profile page
+    div
+        a(href="pages/chat/chat.pug") chat page
